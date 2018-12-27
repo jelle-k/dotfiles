@@ -14,10 +14,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'danilo-augusto/vim-afterglow',{'as':'afterglow'}
 Plug 'dikiaap/minimalist'
-Plug 'python-mode/python-mode', { 'branch': 'develop'  }
 Plug 'scrooloose/nerdtree'
-"[deoplete] deoplete requires nvim 0.3.0+.
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
 Plug 'morhetz/gruvbox' 
 
 
@@ -39,8 +36,6 @@ set wildmenu                    " visual autocomplete for command menu
 set showmatch                   " hightlight matching [{()}]
 set incsearch                   " search as characters are entered
 set hlsearch                    " highlight matches
-" jk is escape
-inoremap jk <esc>
 
 " CtrlP settings
 let g:ctrlp_match_window = 'bottom,order:ttb'
@@ -50,7 +45,7 @@ let g:ctrlp_working_path_mode = 0
 
 let g:airline_powerline_fonts = 1
 set laststatus=2
-let g:airline_theme='gruvbox'
+let g:airline_theme='dracula'
 
 " NerdTree settings
 " Always display // even when empty
@@ -59,9 +54,6 @@ nmap " :NERDTreeToggle<CR>"
 " Alays display left
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Use deoplete.
-"let g:deoplete#enable_at_startup = 1
-
 set t_Co=256                    " terminal colour
-color gruvbox
-set background=dark													" Setting dark mode for gruvbox
+color dracula
+"set background=dark				" Setting dark mode for gruvbox
